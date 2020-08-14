@@ -8,7 +8,7 @@ class Customer
     @age = age
   end
 
-  def all
+  def self.all
     @@all
   end
 
