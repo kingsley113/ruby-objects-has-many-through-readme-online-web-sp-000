@@ -8,4 +8,8 @@ class Waiter
     @years = years
   end
 
+  def all
+    @@all
+  end
+  
 end
