@@ -22,4 +22,18 @@ class Waiter
   end
 
 
+  def meals
+    Meals.all.select do |meal|
+      meal.waiter == self
+    end
+  end
+
+  def customers
+    meals.map do |meals|
+      meals.customers
+    end
+  end
+
+  end
+
 end
