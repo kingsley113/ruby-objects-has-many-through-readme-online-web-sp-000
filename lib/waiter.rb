@@ -23,16 +23,16 @@ class Waiter
 
 
   def meals
-    Meals.all.select do |meal|
+    Meal.all.select do |meal|
       meal.waiter == self
     end
   end
 
-  def customers
-    meals.map do |meals|
-      meals.customers
-    end
-  end
+  # def customers
+  #   meals.map do |meals|
+  #     meals.customers
+  #   end
+  # end
 
   def best_tipper
     best_tipped_meal = meals.max do |meal_a, meal_b|
